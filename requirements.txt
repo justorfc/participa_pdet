@@ -1,0 +1,12 @@
+openai
+pandas
+openai-whisper
+pydub
+ipython
+ipywidgets
+nltk
+textblob
+scikit-learn
+matplotlib
+seaborn
+numpy
