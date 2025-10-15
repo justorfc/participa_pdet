@@ -12,8 +12,10 @@ font = "sans serif"
 # Configuración del servidor
 headless = true
 port = 8501
-enableCORS = false
-enableXsrfProtection = true
+# enableCORS y enableXsrfProtection no deben estar en conflicto
+# Para desarrollo local, se recomienda dejar los valores por defecto
+# enableCORS = true
+# enableXsrfProtection = true
 
 [browser]
 # Configuración del navegador
