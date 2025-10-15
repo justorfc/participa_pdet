@@ -205,3 +205,23 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific data files (keep structure, ignore content)
+data/*
+!data/README.md
+!data/*/
+data/*/*.csv
+data/*/*.json
+data/*/*.txt
+data/*/*.xlsx
+data/*/*.pkl
+
+# Audio files (keep examples if needed)
+audios/*.m4a
+audios/*.mp3
+audios/*.wav
+
+# Transcription files (keep examples if needed)  
+txts/*.txt
+!txts/*prueba*.txt
+!txts/*ejemplo*.txt
