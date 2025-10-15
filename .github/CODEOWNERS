@@ -1,0 +1,17 @@
+# CODEOWNERS file for participa_pdet repository
+# This file defines code owners for different parts of the repository
+# Code owners are automatically requested for review when someone opens a pull request
+
+# Global owners for all files
+* @justorfc
+
+# App code requires review
+/app/ @justorfc
+
+# Documentation changes
+/docs/ @justorfc
+*.md @justorfc
+
+# Critical configuration files
+/requirements.txt @justorfc
+/.gitignore @justorfc

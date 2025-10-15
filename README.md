@@ -41,6 +41,30 @@ participa_pdet/
 
 Crea un nuevo archivo `.py` en `app/pages/` y Streamlit lo detectará automáticamente como una página del menú lateral.
 
+## Contribución y Protección de Rama
+
+Este repositorio tiene configurada la protección de la rama `main`. Para contribuir:
+
+1. **Crea una nueva rama** para tu trabajo:
+   ```bash
+   git checkout -b feature/nombre-descriptivo
+   ```
+
+2. **Haz tus cambios** y confirma:
+   ```bash
+   git add .
+   git commit -m "Descripción clara del cambio"
+   ```
+
+3. **Sube tu rama** y crea un Pull Request:
+   ```bash
+   git push origin feature/nombre-descriptivo
+   ```
+
+4. **Espera la revisión** y que pasen los checks automáticos (CI)
+
+Para más detalles sobre la configuración de protección de rama, consulta [.github/BRANCH_PROTECTION.md](.github/BRANCH_PROTECTION.md).
+
 ---
 
 ¿Dudas o sugerencias? Consulta la carpeta `docs/` para más detalles sobre el plan de migración y organización del proyecto.
