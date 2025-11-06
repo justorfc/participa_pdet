@@ -16,24 +16,30 @@
 - Alternativamente, puedes copiar y pegar solo las partes útiles, reescribiendo donde sea necesario para mayor claridad y modularidad.
 
 ### c) Estructura recomendada para Streamlit multipágina
+
+**Estructura actual implementada:**
 ```
 /app/
-    main.py
+    main.py                    # ✅ Implementado: portada y menú principal
     /pages/
-        1_transcripcion.py
-        2_preprocesamiento.py
-        3_codificacion.py
-        4_analisis_estadistico.py
-        5_visualizaciones.py
-        ...
-/Formularios_Definitivos/
-    (tus formularios .docx)
-/data/
-    (archivos txt, csv, resultados intermedios)
-/requirements.txt
+        1_transcripcion.py     # ⏳ Stub: estructura básica creada
+        2_preprocesamiento.py  # ⏳ Stub: estructura básica creada
+        3_codificacion.py      # ⏳ Stub: estructura básica creada
+        4_analisis_estadistico.py  # ⏳ Stub: estructura básica creada
+        5_visualizaciones.py   # ⏳ Stub: estructura básica creada
+/audios/                       # ✅ Directorio para archivos de audio
+/txts/                         # ✅ Directorio para transcripciones
+/data/                         # ⚠️ Crear para resultados procesados (CSV, análisis)
+/Formularios_Definitivos/      # ✅ Formularios .docx originales
+/Notebooks/                    # ✅ Notebooks originales de referencia
+/docs/                         # ✅ Documentación del proyecto
+/requirements.txt              # ✅ Dependencias definidas
 ```
+
+**Notas:**
 - `main.py`: portada, introducción, navegación general.
 - Cada archivo en `/pages/` es una página de la app (Streamlit detecta automáticamente los scripts en esa carpeta).
+- Se recomienda crear módulos utilitarios (`app/utils.py`, `app/nlp_tools.py`) para código reutilizable.
 
 ## 2. Consejos para la migración
 
@@ -48,8 +54,10 @@
   - Visualizar resultados y descargar archivos.
 
 ### c) Persistencia de datos
-- Guarda resultados intermedios (transcripciones, codificaciones, análisis) en `/data/` para no recalcular todo cada vez.
-- Puedes usar `st.cache_data` para acelerar procesos costosos.
+- Guarda archivos de audio originales en `/audios/`
+- Guarda transcripciones de texto en `/txts/`
+- Guarda resultados intermedios procesados (codificaciones, análisis estadísticos) en `/data/` para no recalcular todo cada vez
+- Puedes usar `st.cache_data` para acelerar procesos costosos
 
 ### d) Visualizaciones
 - Streamlit soporta `matplotlib`, `seaborn`, `plotly`, etc. para gráficos.
