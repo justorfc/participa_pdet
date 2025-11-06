@@ -1,0 +1,40 @@
+# Configuración de Streamlit para participa_pdet
+
+[theme]
+# Colores del tema (puedes personalizarlos)
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"
+font = "sans serif"
+
+[server]
+# Configuración del servidor
+headless = true
+port = 8501
+# enableCORS y enableXsrfProtection no deben estar en conflicto
+# Para desarrollo local, se recomienda dejar los valores por defecto
+# enableCORS = true
+# enableXsrfProtection = true
+
+[browser]
+# Configuración del navegador
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[runner]
+# Configuración de ejecución
+magicEnabled = true
+fastReruns = true
+
+[logger]
+# Nivel de logging
+level = "info"
+
+[client]
+# Configuración del cliente
+showErrorDetails = true
+toolbarMode = "auto"
+
+# Para más opciones de configuración, consulta:
+# https://docs.streamlit.io/library/advanced-features/configuration
